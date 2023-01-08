@@ -9,3 +9,8 @@ services:
       POSTGRES_PASSWORD: password
     ports:
       - "5432-5432"
+  app:
+    image: docker.io/library/security-server:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    depend_on: postgres
